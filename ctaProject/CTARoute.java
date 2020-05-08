@@ -26,6 +26,7 @@ public class CTARoute extends CTAStation {
 		Lineset = new ArrayList<ArrayList<CTAStation>>();
 	}
 
+	//set each color lines and put them into line Arraylist. and sort them by order of the index.
 	public void setLine() {
 		Lineset.add(redLine);
 		Lineset.add(greenLine);

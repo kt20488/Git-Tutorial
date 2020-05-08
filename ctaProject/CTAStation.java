@@ -46,7 +46,7 @@ public class CTAStation extends GeoLocation {
 		this.colorIdx = colorIdx; // int[] colorIdx ={redIdx, greenIdx, blueIdx, brownIdx, purpleIdx, pinkIdx,
 									// orangeIdx, yellowIdx};
 	}
-
+	// getter and setter
 	public String getName() {
 		return name;
 	}
@@ -95,8 +95,9 @@ public class CTAStation extends GeoLocation {
 		this.colorIdx = colorIdx;
 	}
 
+	//Reading file
 	public void ReadFile() throws FileNotFoundException {
-		String path = "C:\\java_lab\\Project\\src\\CTAStations.txt";
+		String path = "C:\\java_lab\\Project\\src\\CTAStation.txt";
 
 		try {
 			String station;
@@ -129,7 +130,7 @@ public class CTAStation extends GeoLocation {
 		}
 
 	}
-
+	//Save file
 	public void OutPutFile() {
 		try {
 			File file = new File("CTAStations.txt");
@@ -146,7 +147,7 @@ public class CTAStation extends GeoLocation {
 		} catch (IOException e) {
 		}
 	}
-
+	//Adding stations into ArrayList
 	public void addStation() {
 
 		int[] colorIdx = { -1, -1, -1, -1, -1, -1, -1, -1 };
@@ -185,7 +186,7 @@ public class CTAStation extends GeoLocation {
 		System.out.println("The station " + name + " is successfully added ");
 
 	}
-
+	//Delete station from ArrayList
 	public void deleteStation() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the name of the station you want to delete : ");
@@ -197,7 +198,7 @@ public class CTAStation extends GeoLocation {
 		}
 		System.out.println("The station " + name + " is removed from the list.");
 	}
-
+	//Searching station by name
 	public int searchStation(String name) {
 		for (int i = 0; i < Stations.size(); i++) {
 			if (Stations.get(i).getName().equals(name)) {
@@ -220,7 +221,7 @@ public class CTAStation extends GeoLocation {
 		System.out.println("There is no station you entered. ");
 		return null;
 	}
-
+	//Modify station using name
 	public void modifyStation() {
 		int[] colorIdx = { -1, -1, -1, -1, -1, -1, -1, -1 };
 
@@ -260,7 +261,7 @@ public class CTAStation extends GeoLocation {
 		// stations.set(searchStation(name),newStation);
 		System.out.println("Moficiation of the " + name + " station is successfully completed!!");
 	}
-
+	//calculate the distance and return the minimum distance of station
 	public CTAStation nearStation() {
 		CTAStation station = new CTAStation();
 		double latitude = 0;

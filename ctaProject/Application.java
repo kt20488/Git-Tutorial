@@ -43,7 +43,8 @@ public class Application {
 			case 5:
 				route.nearStation();
 				break;
-			case 6:
+				
+			case 6:	
 //				route.generateRout();
 				break;
 			case 7:
